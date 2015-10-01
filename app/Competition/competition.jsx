@@ -1,5 +1,4 @@
 import m from 'mithril';
-import Competition from './Competition/competition';
 
 function controller(a, children) {
 	console.log('controller works OK.');
@@ -9,15 +8,14 @@ function controller(a, children) {
 }
 function view() {
 	return(
-		<div class='toto'>
-			<span>Comp Test Is Here</span>
+		<div class='coucou'>
+			<span>Competition is bad for you</span>
 			<input type="text" placeholder='write here'/>
-			<Competition />
 		</div>
 	);
 
 }
 
-var CompTest = {controller, view};
+var Competition = {controller, view};
 
-export default CompTest;
+export default Competition;
