@@ -1,0 +1,27 @@
+{
+  "name": "jspm-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "jspm": {
+    "dependencies": {
+      "mithril": "npm:mithril@^0.2.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-msx": "^0.4.0",
+    "html-dist": "^0.1.0",
+    "uglifyjs": "^2.4.10"
+  }
+}
