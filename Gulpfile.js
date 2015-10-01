@@ -3,6 +3,17 @@ var msx = require('gulp-msx')
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
+var watch = require('gulp-watch');
+// var plumber = require('gulp-plumber');
+var batch = require('gulp-batch');
+
+gulp.task('build', ['transform-jsx','sass']);
+
+gulp.task('watch', function () {
+	watch(['.app/**/*.jsx','./app/**/*.scss'], batch(function (events, done) {
+		gulp.start('build', done);
+	}));
+});
 
 gulp.task('transform-jsx', function() {
 	return gulp.src('./app/**/*.jsx')
@@ -14,6 +25,8 @@ gulp.task('transform-jsx', function() {
 gulp.task('sass', function () {
 
 	gulp.src('./app/**/*.scss')
+	// .pipe(watch('./app/**/*.scss'))
+	// .pipe(plumber())
 	.pipe(sourcemaps.init())
 	.pipe(concat('app.js'))
 	.pipe(sass({outputStyle: 'compressed'}))
@@ -22,7 +35,7 @@ gulp.task('sass', function () {
 })
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./app/**/*.scss', ['sass']);
+	gulp.watch('./app/**/*.scss', ['sass']);
 })
 
-gulp.task('default', ['transform-jsx','sass'])
+gulp.task('default', ['watch'])

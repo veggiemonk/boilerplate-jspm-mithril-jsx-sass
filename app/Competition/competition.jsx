@@ -6,6 +6,7 @@ function controller(a, children) {
 	c.prop1 = m.prop('');
 	return c;
 }
+
 function view() {
 	return(
 		<div class='coucou'>
