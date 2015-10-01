@@ -1,0 +1,1 @@
+msx --watch --extension jsx --harmony --es6module --cache-dir /tmp app app

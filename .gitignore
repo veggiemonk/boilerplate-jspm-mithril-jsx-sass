@@ -3,4 +3,11 @@ node_modules
 app/**/*.js
 app/**/*.css
 dist
+css
+
+
+# msx cache folder
+app/.module-cache
+
+#Webstorm / IntelliJ
 .idea
