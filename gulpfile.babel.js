@@ -14,8 +14,9 @@ const filePath = {
     root: './'
   },
   dst: {
-    js:  './app',
-    css: './css'
+    js:   './app',
+    css:  './css',
+    root: './dist'
   }
 };
 
@@ -26,6 +27,11 @@ gulp.task('serve', ['sass'], function () {
 
   gulp.watch(filePath.src.scss, ['sass']);
   gulp.watch(filePath.src.jsx, ['jsx']).on('change', browserSync.reload);
+});
+
+
+gulp.task('serve:dist', ['sass'], function () {
+  browserSync.init({server: filePath.dst.root});
 });
 
 

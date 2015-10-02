@@ -10,8 +10,6 @@
   "license": "MIT",
   "jspm": {
     "dependencies": {
-      "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.5",
-      "jquery": "github:components/jquery@^2.1.4",
       "mithril": "npm:mithril@^0.2.0"
     },
     "devDependencies": {

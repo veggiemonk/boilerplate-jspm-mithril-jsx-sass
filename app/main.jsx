@@ -1,5 +1,3 @@
-import 'jquery';
-import 'bootstrap-sass';
 
 import m from 'mithril';
 import CompTest from './comptest';
