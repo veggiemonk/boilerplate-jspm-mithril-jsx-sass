@@ -21,14 +21,13 @@
     }
   },
   "devDependencies": {
+    "babel-core": "^5.8.25",
+    "browser-sync": "^2.9.8",
     "gulp": "^3.9.0",
-    "gulp-batch": "^1.0.5",
     "gulp-concat": "^2.6.0",
     "gulp-msx": "^0.4.0",
-    "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-watch": "^4.3.5",
     "html-dist": "^0.1.0",
     "uglifyjs": "^2.4.10"
   }
