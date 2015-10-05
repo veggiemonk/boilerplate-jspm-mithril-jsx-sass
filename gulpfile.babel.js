@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import shell from 'gulp-shell';
 import msx from 'gulp-msx';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
@@ -29,8 +30,10 @@ gulp.task('serve', ['sass'], function () {
   gulp.watch(filePath.src.jsx, ['jsx']).on('change', browserSync.reload);
 });
 
+// TODO: move some tasks to Makefile
+gulp.task('build:dist', shell.task(['make']))
 
-gulp.task('serve:dist', ['sass'], function () {
+gulp.task('serve:dist', ['build:dist'], function () {
   browserSync.init({server: filePath.dst.root});
 });
 
