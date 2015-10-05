@@ -10,6 +10,7 @@
   "license": "MIT",
   "jspm": {
     "dependencies": {
+      "fetch": "npm:whatwg-fetch@^0.9.0",
       "mithril": "npm:mithril@^0.2.0"
     },
     "devDependencies": {
